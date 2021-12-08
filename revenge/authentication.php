@@ -14,8 +14,8 @@ function authentication($__password) {
 
     $dataArr = unserialize($data);
 
-    if (!isset($_SESSION['count']))
-        $_SESSION['counter'] = 0;
+    if (!isset($_SESSION['counter']))
+        $_SESSION['counter'] = 1;
 
     if (!in_array(md5($__password), $dataArr)) {
             $_SESSION['counter']++;
